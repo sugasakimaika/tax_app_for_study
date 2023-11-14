@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 
 womanmoneycareer = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@womanmoneycareer.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         user_input = request.form['user_input']
