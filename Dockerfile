@@ -2,13 +2,17 @@ FROM python:3.7.5-slim
 
 WORKDIR /work
 
-ADD Womanmoneycareer Womanmoneycareer
-ADD tests tests
-ADD setup.py setup.py
-ADD MANIFEST.in MANIFEST.in
+# コードと必要なファイルをコピー
+COPY Womanmoneycareer Womanmoneycareer
+COPY tests tests
+COPY setup.py setup.py
+COPY MANIFEST.in MANIFEST.in
+COPY requirements.txt requirements.txt  # 追加
 
-RUN pip install --upgrade pip \
-  && pip install -r requirements.txt \
-  && pip install pytest
+# pipをアップグレードし、依存関係をインストール
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt && \
+    pip install pytest
 
-CMD bash
+# 実行コマンド、例えばgunicornなど
+CMD ["gunicorn", "Womanmoneycareer:app", "--config", "gunicorn_config.py"]
