@@ -1,0 +1,8 @@
+build:
+  languages:
+    - python
+  # その他のビルドに関する指示
+
+run:
+  web: gunicorn app:womanmoneycareer
+  # その他のプロセスタイプに関する指示
