@@ -2,7 +2,7 @@ from scraper import Scraper
 from quiz_game import QuizGame
 
 def main():
-    url = 'ここにスクレイピングしたいウェブページのURLを入れます'
+    url = 'https://elaws.e-gov.go.jp/document?lawid=340AC0000000034'
     scraper = Scraper(url)
     questions_answers = scraper.scrape()
 
