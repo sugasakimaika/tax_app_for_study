@@ -20,3 +20,4 @@ class Scraper:
         for question, answer in zip(questions, answers):
             questions_answers[question.text] = answer.text
         return questions_answers
+
