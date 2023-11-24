@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>消費税計算アプリ</title>
+    <!-- 必要に応じて追加のCSSやJavaScriptをここに記述 -->
+</head>
+<body>
+    <h1>消費税計算アプリ</h1>
+    <form method="post">
+        <label for="user_input">入力:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">計算</button>
+    </form>
+
+    {% if result %}
+        <h2>計算結果:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
+
