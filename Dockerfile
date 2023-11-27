@@ -7,7 +7,7 @@ COPY Womanmoneycareer Womanmoneycareer
 COPY tests tests
 COPY setup.py setup.py
 COPY MANIFEST.in MANIFEST.in
-COPY requirements.txt requirements.txt  # 追加
+COPY requirements.txt requirements.txt
 
 # pipをアップグレードし、依存関係をインストール
 RUN pip install --upgrade pip && \
