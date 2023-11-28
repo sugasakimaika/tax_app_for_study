@@ -15,5 +15,10 @@ RUN pip install --upgrade pip && \
     pip install -r requirements.txt && \
     pip install pytest
 
+# ログファイル用のディレクトリを作成
+RUN mkdir -p /path/to && \
+    touch /path/to/access.log && \
+    touch /path/to/error.log
+
 # アプリケーションの実行コマンドを設定
 CMD ["gunicorn", "Womanmoneycareer:app", "--config", "gunicorn_config.py"]
