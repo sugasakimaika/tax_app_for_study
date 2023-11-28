@@ -21,4 +21,4 @@ RUN mkdir -p /path/to && \
     touch /path/to/error.log
 
 # アプリケーションの実行コマンドを設定
-CMD ["gunicorn", "Womanmoneycareer:app", "--config", "gunicorn_config.py"]
+CMD ["gunicorn", "womanmoneycareer:app", "--config", "gunicorn_config.py"]
